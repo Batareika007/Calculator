@@ -57,7 +57,7 @@
                     </ul>
 
                 </div>
-                <button class="calcbutton">Calculate</button>
+                <button class="calcbutton"  onclick="myFunction()" id="button">Calculate</button>
 
 
                 <!-- result -->
@@ -65,12 +65,15 @@
 
 
                 <div class="calc__result">
+
+                    <!-- spend per month -->
+
                     <div class="calc__spending">
                         <div>
-                            Your spending per month: <span id="spendingSum">2</span>
+                            Your spending per month: <span id="spendingSum"></span>
                         </div>
                         <div>
-                            save per month: <span id="savePerMonth">10000</span>
+                            save per month: <span id="savePerMonth"></span>
                         </div>
                     </div>
 
@@ -99,41 +102,7 @@
         </footer>
 
     </div>
-    <script>
-        let initialAmount = document.getElementById('incomeAmount');
-        let initialAmountSave;
-        initialAmount.addEventListener('keyup', (e) => {
-            initialAmountSave = e.target.value;
-        })
-
-        let goalAmount = document.getElementById('goalAmount');
-        let goalAmountSave;
-        goalAmount.addEventListener('keyup', (e) => {
-            goalAmountSave = e.target.value;
-        })
-
-        let button = document.getElementById('calcbutton');
-        let perMonth = document.getElementById('savePerMonth');
-        let result = 0;
-
-        const myfunc = function() {
-            alert('clicked')
-            perMonth.innerText = 1000;
-            // result = initialAmountSave +
-
-            
-        }
-
-        // let a = Math.floor(220000 / 2045)
-        // a.toFixed(2)
-        // a = Number(a.toFixed(2))
-
-
-
-        button.addEventListener('click', myfunc)
-
-        console.log(document)
-    </script>
+    <script src="JS/script.js"></script>
 </body>
 
 </html>
