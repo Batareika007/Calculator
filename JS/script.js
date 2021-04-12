@@ -55,15 +55,20 @@
     })
 
     // sum of spend per month 
-    
-
-  
+     
     function myFunction() {
         let spendPerMonth = Number(costRentAppartmentSave) + Number(costFoodSave) + Number(costMedicineSave) + Number(costTransportSave) + Number(costMobileInternetSave) + Number(costEntertainmentSave) ;
+        let savePerMonthResult = Number(initialAmountSave) - Number(spendPerMonth);
         document.getElementById("spendingSum").innerHTML = spendPerMonth ;
-        // alert(spendPerMonth);
+        document.getElementById("savePerMonth").innerHTML = savePerMonthResult;
+        let yearsResult = goalAmountSave/savePerMonthResult/12;
+        result = Number(yearsResult.toFixed(2));
+        document.getElementById("goalYears").innerHTML = result;
+        
 
     }
+
+    // goalAmountSave
 
         // document.perMonth.innerHTML = "1000";
 
