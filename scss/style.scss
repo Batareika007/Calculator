@@ -1,5 +1,185 @@
 @import "global.scss";
+@import url('https://fonts.googleapis.com/css2?family=Rationale&display=swap');
 
-div{
-    font-size: 14px;
+body {
+    font-size: 23px;
+    font-family: 'Rationale',
+        sans-serif;
+}
+
+// .wrapper {}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+header {
+    a {
+
+        color: #fff;
+    }
+
+    padding: 16px 5%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #252A34;
+}
+
+// .logo {}
+
+.header-link {
+    a {
+        margin-left: 20px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+.subheader {
+    padding: 28px 0;
+    background-color: #EAEAEA;
+
+    p {
+        max-width: 55%;
+        margin: 0 auto;
+    }
+}
+
+.calc {
+    padding: 0 150px;
+}
+
+.calc__header {
+    padding: 36px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input {
+    font-size: 30px;
+    width: 150px;
+    padding: 8px 12px;
+    border: 3px solid #000000;
+
+}
+
+// .calc__income {}
+
+// .calc__goal {}
+
+.calc__main {
+    border: 6px solid #000000;
+    padding: 30px 26px;
+    display: flex;
+    justify-content: flex-start
+}
+
+.calc__main__list {
+    margin: 0 160px 0 0;
+
+    li {
+        line-height: 50px;
+        // width: 310px;
+    }
+
+
+    input {
+        border: 3px solid #08D9D6;
+        height: 50px;
+    }
+}
+
+.calcbutton {
+    margin: 30px 0 30px 30px;
+    width: 440px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.51);
+
+    &:active {
+        box-shadow: none;
+        position: relative;
+        top: 4px;
+        left: 4px;
+    }
+}
+
+.calc__result {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#spendingSum {
+    margin: 0 0 0 10px;
+    padding: 0 10px;
+    border: 3px solid red;
+    min-width: 80px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+#savePerMonth {
+    margin: 0 0 0 10px;
+    padding: 0 10px;
+    display: inline-block;
+    border: 3px solid #08D9D6;
+    min-width: 80px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.calc__spending {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    div {
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+.calc__goalresult {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calc__goalresult_years {
+    flex: 0 0 50%;
+    display: flex;
+    align-items: center;
+}
+
+#goalYears {
+    font-weight: 700;
+    font-size: 1.5em;
+    padding: 0 5px;
+}
+
+.goal-success {
+    color: #08D9D6;
+    display: none;
+}
+
+.goal-unsuccess {
+    color: red;
+    // display: none;
 }

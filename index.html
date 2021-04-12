@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,132 @@
     <link rel="stylesheet" href="CSS/style.css">
     <title>Document</title>
 </head>
+
 <body>
-    <div>Hello world</div>
+    <div class="wrapper">
+        <div class="container">
+            <header>
+                <div class="logo"><a href="index.html">Logo</a></div>
+                <nav class="header-link">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">GitHub</a>
+                </nav>
+            </header>
+            <div class="subheader">
+                <p>This calculator will help you to check how much you can save every month
+                    by input your mounty income, your spending and cost of your goal item.
+                    It can be everything, like a new pc, car, appartment, etc... </p>
+            </div>
+        </div>
+        <div class="container">
+
+            <div class="calc">
+                <div class="calc__header">
+                    <label class="calc__income">
+                        Insert Income mount: <input class="calc__income_input" type="number" name="calc__income"
+                            id="incomeAmount">
+                    </label>
+                    <label class="calc__goal">
+                        Insert the value of your goal: <input class="calc__income_input" type="number" name="calc__goal"
+                            id="goalAmount">
+                    </label>
+                </div>
+                <div class="calc__main">
+                    <ul class="calc__main__list">
+                        <li> <label for="rent"> Rent appartment </label></li>
+                        <li> <label for="food"> Food </label></li>
+                        <li> <label for="med"> Medicine </label></li>
+                        <li> <label for="tran"> Transport </label></li>
+                        <li> <label for="mob"> Mobile and Internet </label></li>
+                        <li> <label for="ent"> Entertainment </label></li>
+                    </ul>
+                    <ul class="calc__main__list">
+                        <li><input type="number" name="rent" id="rentAppartment"></li>
+                        <li><input type="number" name="food" id="food"></li>
+                        <li> <input type="number" name="med" id="medicine"> </li>
+                        <li> <input type="number" name="tran" id="transport"> </li>
+                        <li><input type="number" name="mob" id="mobileInternet"> </li>
+                        <li><input type="number" name="ent" id="entertainment"> </li>
+                    </ul>
+
+                </div>
+                <button class="calcbutton">Calculate</button>
+
+
+                <!-- result -->
+
+
+
+                <div class="calc__result">
+                    <div class="calc__spending">
+                        <div>
+                            Your spending per month: <span id="spendingSum">2</span>
+                        </div>
+                        <div>
+                            save per month: <span id="savePerMonth">10000</span>
+                        </div>
+                    </div>
+
+
+                    <div class="calc__goalresult">
+                        <div class="calc__goalresult_years">To get your goal you need <span id="goalYears"> 1119</span> years
+                        </div>
+                        <!-- success in 10 years -->
+                        <div class="goal-success">
+                            <span id="goalSuccess">Great! You can reach your goal in less than
+                                10years.
+                            </span>
+                        </div>
+                        <!-- success on more then 30 years -->
+                        <div class="goal-unsuccess">
+                            <span id="golaUnsuccess">I’m sorry buy you can’t do it, you need to increase income or
+                                reduce expenses</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer>
+
+        </footer>
+
+    </div>
+    <script>
+        let initialAmount = document.getElementById('incomeAmount');
+        let initialAmountSave;
+        initialAmount.addEventListener('keyup', (e) => {
+            initialAmountSave = e.target.value;
+        })
+
+        let goalAmount = document.getElementById('goalAmount');
+        let goalAmountSave;
+        goalAmount.addEventListener('keyup', (e) => {
+            goalAmountSave = e.target.value;
+        })
+
+        let button = document.getElementById('calcbutton');
+        let perMonth = document.getElementById('savePerMonth');
+        let result = 0;
+
+        const myfunc = function() {
+            alert('clicked')
+            perMonth.innerText = 1000;
+            // result = initialAmountSave +
+
+            
+        }
+
+        // let a = Math.floor(220000 / 2045)
+        // a.toFixed(2)
+        // a = Number(a.toFixed(2))
+
+
+
+        button.addEventListener('click', myfunc)
+
+        console.log(document)
+    </script>
 </body>
+
 </html>
