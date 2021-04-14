@@ -7,7 +7,8 @@ body {
         sans-serif;
 }
 
-// .wrapper {}
+
+// header
 
 .container {
     max-width: 1140px;
@@ -15,18 +16,19 @@ body {
 }
 
 header {
-    a {
+    padding: 20px 5% 20px;
 
-        color: #fff;
+    a {
+        color: hsl(0, 0%, 100%);
     }
 
-    padding: 16px 5%;
-    display: flex;
-    justify-content: space-between;
-    background-color: #252A34;
+    background-color: hsl(220, 17%, 17%);
 }
 
-// .logo {}
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+}
 
 .header-link {
     a {
@@ -40,23 +42,31 @@ header {
 
 .subheader {
     padding: 28px 0;
-    background-color: #EAEAEA;
+    background-color: hsl(0, 0%, 92%);
 
     p {
-        max-width: 55%;
+        max-width: 70%;
         margin: 0 auto;
+        // font-size: 1.5vmin;
+
     }
 }
 
-.calc {
-    padding: 0 150px;
-}
+// end header
+
+// calc section 
+
+
 
 .calc__header {
     padding: 36px 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-evenly;
+
+    // align-items: center;
+    >label {
+        // width: 500px;
+    }
 }
 
 input::-webkit-outer-spin-button,
@@ -65,11 +75,14 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
+
+
 input {
     font-size: 30px;
     width: 150px;
-    padding: 8px 12px;
-    border: 3px solid #000000;
+    padding: 1px 8px;
+    border-radius: 10px;
+    border: 2px solid hsl(0, 0%, 0%);
 
 }
 
@@ -78,44 +91,88 @@ input {
 // .calc__goal {}
 
 .calc__main {
-    border: 6px solid #000000;
-    padding: 30px 26px;
+    margin: 0 auto;
+    width: 80%;
+    border: solid 2px hsla(0, 0%, 0%, 0.198);
+    padding: 10px 10px;
+    overflow: hidden;
     display: flex;
-    justify-content: flex-start
+    justify-content: space-evenly;
 }
 
 .calc__main__list {
-    margin: 0 160px 0 0;
-
     li {
         line-height: 50px;
-        // width: 310px;
     }
 
-
     input {
-        border: 3px solid #08D9D6;
-        height: 50px;
+        border: 3px solid hsl(179, 93%, 44%);
+        background-color: transparent;
+
+
+
     }
 }
 
-.calcbutton {
-    margin: 30px 0 30px 30px;
-    width: 440px;
-    height: 70px;
+.calc__main__list_name {
+    display: inline-block;
+    width: 200px;
+}
+
+.calc-button {
+    margin: 30px 0 10px 0;
+    width: 400px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 30px;
-    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.51);
+    border-radius: 4px;
+    transition: 0.1s;
+
+    &:hover {
+        box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.51);
+        transition: 0.1s;
+    }
 
     &:active {
-        box-shadow: none;
+        box-shadow: inset 2px 2px 15px rgba(0, 0, 0, 0.51);
+        // box-shadow: none;
         position: relative;
         top: 4px;
         left: 4px;
+        transition: 0s;
+
+
     }
 }
+
+.add-expenses {
+    display: inline-block;
+    // background-color: hsl(179, 93%, 44%);
+    cursor: pointer;
+
+    &::before {
+        content: '+';
+        width: 30px;
+        line-height: 30px;
+        height: 30px;
+        border-radius: 30px;
+        background-color: hsl(179, 93%, 44%);
+        display: inline-block;
+        text-align: center;
+        margin: 0 10px 0 0;
+
+    }
+
+    // &:hover::before {
+    //     background-color: hsl(179, 93%, 20%);
+    //     color: white;
+    // }
+
+}
+
+// calc result
 
 .calc__result {
     display: flex;
@@ -144,17 +201,17 @@ input {
     align-items: center;
 }
 
-.calc__spending {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+// .calc__spending-save {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-evenly;
 
-    div {
-        display: flex;
-        align-items: center;
-    }
+//     div {
+//         display: flex;
+//         align-items: center;
+//     }
 
-}
+// }
 
 .calc__goalresult {
     display: flex;
@@ -162,11 +219,7 @@ input {
     justify-content: space-between;
 }
 
-.calc__goalresult_years {
-    flex: 0 0 50%;
-    display: flex;
-    align-items: center;
-}
+// .calc__goalresult_years {}
 
 #goalYears {
     font-weight: 700;
@@ -181,5 +234,5 @@ input {
 
 .goal-unsuccess {
     color: red;
-    // display: none;
+    display: none;
 }
